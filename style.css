@@ -1,0 +1,211 @@
+                * {
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                    font-family: 'Ubuntu', sans-serif;
+                    text-decoration: none;
+                }
+                
+                .navbar {
+                    position: fixed;
+                    background-color: transparent;
+                    width: 100%;
+                    top: 0;
+                    padding: 30px 0;
+                    z-index: 999;
+                    transition: .2s linear;
+                }
+                
+                .inner-width {
+                    max-width: 1200px;
+                    margin: auto;
+                    padding: 0 30px;
+                }
+                
+                .navbar .inner-width {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                
+                .navbar-menu a {
+                    margin-left: 30px;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: white;
+                    transition: .2s linear;
+                }
+                
+                .navbar-menu a:hover {
+                    color: rgb(170, 168, 168) !important;
+                }
+                
+                .sticky {
+                    background-color: rgb(245, 242, 242);
+                    padding: 18px 0;
+                }
+                
+                .sticky .logo {
+                    background-image: url("black-logo.png");
+                }
+                
+                .sticky .navbar-menu a {
+                    color: #111;
+                }
+                
+                .sticky .menu-toggler span {
+                    background-color: #111;
+                }
+                
+                .logo {
+                    width: 44px;
+                    height: 32px;
+                    background-image: url('white-logo.png');
+                    background-size: contain;
+                }
+                
+                .menu-toggler {
+                    background: none;
+                    width: 30px;
+                    border: none;
+                    cursor: pointer;
+                    position: relative;
+                    outline: none;
+                    z-index: 999;
+                    display: none;
+                }
+                
+                .menu-toggler span {
+                    display: block;
+                    height: 3px;
+                    background-color: white;
+                    margin: 5px 0;
+                    position: relative;
+                    transition: .3s linear;
+                }
+                
+                #home {
+                    height: 100vh;
+                    min-height: 500px;
+                    background: url('bg.jpg') no-repeat center;
+                    background-attachment: fixed;
+                    background-size: cover;
+                }
+                
+                #home .inner-width {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100%;
+                    text-align: center;
+                }
+                
+                #home .content {
+                    width: 100%;
+                    color: #fff;
+                }
+                
+                #home .content h1 {
+                    font-size: 55px;
+                    font-weight: 600;
+                    letter-spacing: 3px;
+                    margin-bottom: 50px;
+                    font-family: 'Lobster Two', cursive;
+                }
+                
+                #home .content h1::after {
+                    content: " Siddhath Mishra";
+                    animation: anim 5s linear infinite;
+                }
+                
+                @keyframes anim {
+                    25% {
+                        content: " A Developer";
+                    }
+                    50% {
+                        content: " A Designer";
+                    }
+                    75% {
+                        content: " A CodeNewbie";
+                    }
+                }
+                
+                .sm a {
+                    color: #fff;
+                    font-size: 25px;
+                    margin: 0 8px;
+                    transition: .2s linear;
+                }
+                
+                .sm a:hover {
+                    color: rgb(192, 192, 192);
+                }
+                
+                .button {
+                    margin-top: 60px;
+                }
+                
+                .button a {
+                    display: inline-block;
+                    color: rgb(150, 149, 149);
+                    padding: 14px 10px;
+                    font-size: 18px;
+                    font-weight: 500;
+                    border: 1px solid;
+                    border-radius: 7px;
+                    letter-spacing: 2px;
+                    transition: .2s linear;
+                }
+                
+                .button a:hover {
+                    background-color: rgba(128, 128, 128, 0.170);
+                    color: white;
+                }
+                
+                p {
+                    margin: 60px;
+                    font-size: 17px;
+                    line-height: 25px;
+                }
+                
+                @media (max-width:980px) {
+                    .menu-toggler {
+                        display: block;
+                    }
+                    .navbar-menu {
+                        position: fixed;
+                        height: 100vh;
+                        width: 100%;
+                        background-color: #353b48;
+                        top: 0;
+                        right: -100%;
+                        max-width: 400px;
+                        padding: 80px 50px;
+                        transition: .3 linear;
+                    }
+                    .navbar-menu a {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 40px 0;
+                        font-size: 30px;
+                    }
+                    .sticky .navbar-menu {
+                        background-color: #fff;
+                    }
+                    .navbar-menu.active {
+                        right: 0;
+                    }
+                    .menu-toggler.active span:nth-child(1) {
+                        transform: rotate(-45deg);
+                        top: 6px;
+                    }
+                    .menu-toggler.active span:nth-child(2) {
+                        opacity: 0;
+                    }
+                    .menu-toggler.active span:nth-child(3) {
+                        transform: rotate(45deg);
+                        bottom: 10px;
+                    }
+                }
